@@ -12,3 +12,11 @@
     margin: 10px;
     text-align: center;
 }
+.names .box p{
+    color: #000000;
+}
+
+.names{
+    display: flex;
+    justify-content: center;
+}

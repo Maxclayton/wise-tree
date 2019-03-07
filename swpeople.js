@@ -1,32 +1,34 @@
-import { people } from '../data/people.js'
+import {people} from './people.js';
 
-const men = people.filter(person => person.gender === 'male')
-const women = people.filter(person => person.gender === 'female')
-const other = people.filter(person => (person.gender === 'n/a') || (person.gender === 'hermaphrodite') || (person.gender === 'none'))
-
+const men = people.filter(person => person.gender === 'male');
+const women = people.filter(person => person.gender === 'female');
+const other = people.filter(person => (person.gender === 'n/a') || (person.gender === 'hermaphrodite') || (person.gender === 'none'));
+const shortPpl = people.filter(person => Number(person.height) < 100);
+const fatPpl = people.filter(person => Number(person.mass.replace(/,/g, '')) > 1000);
+console.log(fatPpl);
 //console.log(men, women, other)
 
-const mainContainer = document.createElement('div')
-mainContainer.className = 'container'
-
+const mainContainer = document.querySelector('.man-holder');
 men.forEach((man) => {
-    let manElement = document.createElement('div')
-    manElement.className = 'box'
-    manElement.textContent = man.name
-    let eyeColor = document.createElement('p')
-    eyeColor.textContent = man.eye_color
-    manElement.appendChild(eyeColor)
-    mainContainer.appendChild(manElement)
-})
+    let manElement = document.createElement('div');
+    manElement.className = 'box';
+    manElement.textContent = man.name;
+    let eyeColor = document.createElement('p');
+    eyeColor.textContent = man.eye_color;
+    manElement.appendChild(eyeColor);
+    mainContainer.appendChild(manElement);
+});
+
+
+const womanContainer = document.querySelector('.woman-holder');
+
 
 women.forEach((man) => {
-    let manElement = document.createElement('div')
-    manElement.className = 'box'
-    manElement.textContent = man.name
-    let eyeColor = document.createElement('p')
-    eyeColor.textContent = man.eye_color
-    manElement.appendChild(eyeColor)
-    mainContainer.appendChild(manElement)
+    let manElement = document.createElement('div');
+    manElement.className = 'box';
+    manElement.textContent = man.name;
+    let eyeColor = document.createElement('p');
+    eyeColor.textContent = man.eye_color;
+    manElement.appendChild(eyeColor);
+    womanContainer.appendChild(manElement);
 })
-
-document.body.appendChild(mainContainer)
