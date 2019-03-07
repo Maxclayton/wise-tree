@@ -2,6 +2,7 @@ html,
 body {
   font-family: 'Open Sans', sans-serif;
   text-align: center;
+  color: white;
 }
 
 * {
@@ -166,4 +167,14 @@ footer a {
     padding: 10px;
     line-height: normal;
   }
+}
+h3 {
+  color: black;
+}
+.man-holder {
+  text-align: end;
+}
+
+.woman-holder {
+  text-align: end;
 }
