@@ -172,9 +172,11 @@ h3 {
   color: black;
 }
 .man-holder {
-  text-align: end;
+  text-align: center;
+  border: 2px solid black;
 }
 
 .woman-holder {
-  text-align: end;
+  text-align: center;
+  border: 2px solid black;
 }
