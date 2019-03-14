@@ -1,9 +1,15 @@
 import {people} from './people.js';
 
 
-const fatPpl = people.filter(person => Number(person.mass.replace(/,/g, '')) > 100);
+const fatPpl = people.filter(person => Number(person.mass.replace(/,/g, '')) > 100); 
+fatPpl.sort(function (a,b) {
+    return Number(b.mass.replace(/,/g, '')) - Number(a.mass.replace(/,/g, ''));
+ });
 console.log(fatPpl);
 const skinnyPpl = people.filter(person => Number(person.mass.replace(/,/g, '')) < 50);
+skinnyPpl.sort(function (a,b) {
+    return Number(b.mass.replace(/,/g, '')) - Number(a.mass.replace(/,/g, ''));
+});
 console.log(skinnyPpl);
 //console.log(men, women, other)
 
@@ -11,7 +17,7 @@ console.log(skinnyPpl);
 
 const fatPplContainer = document.querySelector('.fatPplContainer');
 
-fatPpl.forEach((fatPerson) => {
+ fatPpl.forEach((fatPerson) => {
     let fatPersonElement = document.createElement('div');
     fatPersonElement.className = 'box';
     fatPersonElement.textContent = fatPerson.name;
@@ -19,9 +25,7 @@ fatPpl.forEach((fatPerson) => {
     mass.textContent = fatPerson.mass;
     fatPersonElement.appendChild(mass);
     fatPplContainer.appendChild(fatPersonElement);
-    fatPpl.sort(function (a,b) {
-        return Number(a.mass.replace(/,/g, '')) - Number(b.mass.replace(/,/g, ''));
-    console.log(fatPpl);
+     { console.log(fatPpl);}
 });
 
 const skinnyPplContainer = document.querySelector('.skinnyPplContainer');
@@ -34,7 +38,5 @@ skinnyPpl.forEach((skinnyPerson) => {
     mass.textContent = skinnyPerson.mass;
     skinnyPersonElement.appendChild(mass);
     skinnyPplContainer.appendChild(skinnyPersonElement);
-    skinnyPpl.sort(function (a,b) {
-        return Number(a.mass.replace(/,/g, '')) - Number(b.mass.replace(/,/g, ''));
-    console.log(skinnyPpl);
-}); }); });
+    { console.log(skinnyPpl);}
+});
