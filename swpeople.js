@@ -19,7 +19,10 @@ fatPpl.forEach((fatPerson) => {
     mass.textContent = fatPerson.mass;
     fatPersonElement.appendChild(mass);
     fatPplContainer.appendChild(fatPersonElement);
-})
+    fatPpl.sort(function (a,b) {
+        return Number(a.mass.replace(/,/g, '')) - Number(b.mass.replace(/,/g, ''));
+    console.log(fatPpl);
+});
 
 const skinnyPplContainer = document.querySelector('.skinnyPplContainer');
 
@@ -31,4 +34,7 @@ skinnyPpl.forEach((skinnyPerson) => {
     mass.textContent = skinnyPerson.mass;
     skinnyPersonElement.appendChild(mass);
     skinnyPplContainer.appendChild(skinnyPersonElement);
-})
+    skinnyPpl.sort(function (a,b) {
+        return Number(a.mass.replace(/,/g, '')) - Number(b.mass.replace(/,/g, ''));
+    console.log(skinnyPpl);
+}); }); });
