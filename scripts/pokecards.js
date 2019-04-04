@@ -27,4 +27,4 @@ function createPokeCard(pokedata) {
     card.appendChild(name)
     card.appendChild(image)
     mainContainer.appendChild(card)
-}
+} 
