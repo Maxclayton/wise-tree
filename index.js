@@ -6,7 +6,7 @@ async function main() {
   // Create a new Pokemon called `Bulbasaur`
     const newPokemon = await prisma.createPokemon({
         name: 'Bulbasaur',
-        url: 'https://pokeapi.co/api/v2/pokemon/1'})
+        url: 'http://hp-api.herokuapp.com/api/characters '})
   console.log(`Created new pokemon: ${newPokemon.name} (ID: ${newPokemon.id})`)
 
   // Read all pokemon from the database and print them to the console

@@ -16,7 +16,7 @@ pokemon.forEach((singleMon) => {
 //console.log(pokemon);
 
 const mainContainer = document.querySelector('.pokemon-container');
-
+class pokepoke{}
 function createPokeCard(pokedata) {
     let card = document.createElement('div');
     card.classList = 'card';
@@ -26,7 +26,7 @@ function createPokeCard(pokedata) {
     let frontHolder = document.createElement('div');
     frontHolder.classList = 'front';
     let backHolder = document.createElement('div');
-    backHolder.classList = 'back hidden';
+    backHolder.classList = 'back hidden bounce animated';
     let list = document.createElement('ul');
     list.classList = 'abilities';
 
@@ -58,9 +58,9 @@ document.addEventListener('click', function (event) {
     }
 
     let thisFront = cardClicked.querySelector('.front');
-    thisFront.classList = 'front hidden'
+    thisFront.classList = 'front hidden bounce animated'
     let thisBack = cardClicked.querySelector('.back');
-    thisBack.classList = 'back';
+    thisBack.classList = 'back flipInY animated';
   }else if(event.target.matches('.back') || event.target.matches('.abilities') || event.target.matches('.list-ability')){
     let cardClicked = event.target;
     while(cardClicked.className != 'card'){
@@ -68,12 +68,50 @@ document.addEventListener('click', function (event) {
     }
 
     let thisFront = cardClicked.querySelector('.front');
-    thisFront.classList = 'front'
+    thisFront.classList = 'front bounce animated'
     let thisBack = cardClicked.querySelector('.back');
-    thisBack.classList = 'back hidden';
+    thisBack.classList = 'back hidden bounce animated';
   }else{
     console.log('something else was clicked');
     console.log(event.target);
   }
 });
+
+class Pokemon {
+  constructor(name) {
+      this.id = 0,
+      this.name = name,
+      this.moves = [
+        {
+          move: {
+            name: 'Genius',
+          },
+        },
+        {
+          move: {
+            name: 'Brilliance',
+          },
+        },
+        {
+          move: {
+            name: 'Hammer',
+          },
+        },
+        {
+          move: {
+            name: 'Thunder',
+          },
+        },
+      ]
+  }
+}
+
+const maxemonButton = document.querySelector('#maxemon')
+const selectPokemonButton = document.querySelector('#fetchPokemon')
+const poketypeButton = document.querySelector('#poketype')
+
+maxemonButton.addEventListener('click', function() {
+  createPokeCard(matchIdToImage(new Pokemon('Maxemon')))
+})
+
 
