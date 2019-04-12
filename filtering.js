@@ -1,4 +1,4 @@
-import { pokemon } from '../data/pokemon.js'
+import { pokemon } from '../pokecards.js'
 
 pokemon.forEach(singleMon => {
     fetch(singleMon.url)
@@ -9,3 +9,5 @@ pokemon.forEach(singleMon => {
         createPokeCard(matchIdToImage(myJson))
       })
   })
+
+ 

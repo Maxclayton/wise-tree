@@ -77,6 +77,8 @@ document.addEventListener('click', function (event) {
   }
 });
 
+
+
 class Pokemon {
   constructor(name) {
       this.id = 0,
@@ -107,11 +109,9 @@ class Pokemon {
 }
 
 const maxemonButton = document.querySelector('#maxemon')
-const selectPokemonButton = document.querySelector('#fetchPokemon')
-const poketypeButton = document.querySelector('#poketype')
 
-maxemonButton.addEventListener('click', function() {
-  createPokeCard(matchIdToImage(new Pokemon('Maxemon')))
+maxemonButton.addEventListener('click', function() 
+{ createPokeCard(matchIdToImage(new Pokemon('Maxemon')))
 })
 
 
