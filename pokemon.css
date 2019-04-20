@@ -5,8 +5,11 @@
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    
 }
-
+.front-image{
+  border-width: thick;
+}
 .title{
   justify-content: center;
   font-size: 59px;
@@ -29,6 +32,7 @@ img {
   padding: 4px;
   width: 200px;
   height: 200px;
+  
 }
 
 .backImage {
