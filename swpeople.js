@@ -3,14 +3,14 @@ import { people } from "./people.js";
 const fatPpl = people.filter(
   person => Number(person.mass.replace(/,/g, "")) > 100
 );
-fatPpl.sort(function(a, b) {
+fatPpl.sort((a, b) => {
   return Number(b.mass.replace(/,/g, "")) - Number(a.mass.replace(/,/g, ""));
 });
 console.log(fatPpl);
 const skinnyPpl = people.filter(
   person => Number(person.mass.replace(/,/g, "")) < 50
 );
-skinnyPpl.sort(function(a, b) {
+skinnyPpl.sort((a, b) => {
   return Number(b.mass.replace(/,/g, "")) - Number(a.mass.replace(/,/g, ""));
 });
 console.log(skinnyPpl);

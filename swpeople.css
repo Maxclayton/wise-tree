@@ -21,6 +21,7 @@
 .names{
     display: flex;
     justify-content: space-around;
+    color:black;
 }
 
 

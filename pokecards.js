@@ -29,6 +29,9 @@ function createPokeCard(pokedata) {
     backHolder.classList = 'back hidden bounce animated';
     let list = document.createElement('ul');
     list.classList = 'abilities';
+    let img = document.createElement('img');
+    img.src = 'pokeball_PNG8.png';
+    backHolder.appendChild(img);
 
     for (const ability of pokedata.abilities) {
       let li = document.createElement('li');
@@ -61,7 +64,7 @@ document.addEventListener('click', function (event) {
     thisFront.classList = 'front hidden bounce animated'
     let thisBack = cardClicked.querySelector('.back');
     thisBack.classList = 'back flipInY animated';
-  }else if(event.target.matches('.back') || event.target.matches('.abilities') || event.target.matches('.list-ability')){
+  }else if(event.target.matches('.back') || event.target.matches('.abilities') || event.target.matches('.list-ability') || event.target.matches('.back > img')){
     let cardClicked = event.target;
     while(cardClicked.className != 'card'){
       cardClicked = cardClicked.parentElement;
