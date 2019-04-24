@@ -151,6 +151,11 @@ footer {
   line-height: 40px;
 }
 
+p > footer {
+color: white;
+}
+
+
 footer a {
   color: white;
 }
