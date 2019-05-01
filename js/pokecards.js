@@ -30,7 +30,7 @@ function createPokeCard(pokedata) {
     let list = document.createElement('ul');
     list.classList = 'abilities';
     let img = document.createElement('img');
-    img.src = 'pokeball_PNG8.png';
+    img.src = '../image/pokeball_PNG8.png';
     backHolder.appendChild(img);
 
     for (const ability of pokedata.abilities) {
@@ -86,35 +86,38 @@ class Pokemon {
   constructor(name) {
       this.id = 0,
       this.name = name,
-      this.moves = [
+      this.sprites = {
+        front_default: '../image/mystery.jpg'
+      },
+      this.abilities = [
         {
-          move: {
-            name: 'Genius',
+          ability: {
+            name: 'Fire-Breathing',
           },
         },
         {
-          move: {
-            name: 'Brilliance',
+          ability: {
+            name: 'Lightning Eyes',
           },
         },
         {
-          move: {
-            name: 'Hammer',
+          ability: {
+            name: 'Exploding Head',
           },
         },
         {
-          move: {
-            name: 'Thunder',
+          ability: {
+            name: 'Gun Hands',
           },
         },
       ]
   }
 }
 
-const maxemonButton = document.querySelector('#maxemon')
+const maxemonButton = document.querySelector("#maxemon");
 
-maxemonButton.addEventListener('click', function() 
-{ createPokeCard(matchIdToImage(new Pokemon('Maxemon')))
-})
+maxemonButton.addEventListener("click", function() {
+  createPokeCard(new Pokemon("Maxemon"));
+});
 
 

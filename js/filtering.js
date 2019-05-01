@@ -1,4 +1,4 @@
-import { pokemon } from '../pokecards.js'
+import { pokemon } from './pokecards.js'
 
 pokemon.forEach(singleMon => {
     fetch(singleMon.url)

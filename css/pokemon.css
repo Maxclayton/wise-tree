@@ -13,6 +13,7 @@ body {
 .front-image {
   border-width: thick;
   background-color:white;
+  cursor: pointer;
 }
 .title {
   justify-content: center;
@@ -36,9 +37,7 @@ figure {
   align-items: center;
   height: 200px;
   max-height: 200px;
-  background: url(pokeball_PNG8.png) no-repeat center center;
-  background-color: blue;
-
+  cursor: pointer;
 }
 .back > img{
   position: absolute;
@@ -69,6 +68,7 @@ button {
   position: relative;
   font-weight: bold;
   text-decoration: underline;
+  cursor: pointer;
 }
 
 img {

@@ -72,6 +72,11 @@ nav ul li a:hover {
   border-bottom: 2px solid lightblue;
 }
 
+.project-pic:hover{
+  position: relative;
+  top: -10px;
+}
+
 .project-title {
   font-weight: bold;
 }

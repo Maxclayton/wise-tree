@@ -13,15 +13,26 @@
     text-align: center;
 }
 .names .box p{
-    color: #F67280;
+    color: #C06C84;
 }
 
 
+header{
+    font-weight: bold;
+    font-size: 30px;
+}
 
+h3{
+    text-decoration: underline;
+}
 .names{
     display: flex;
     justify-content: space-around;
     color:black;
+  background-color: #F8B195;
 }
 
+body {
+   background: #355C7D;
 
+}
