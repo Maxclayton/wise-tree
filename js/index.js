@@ -1,9 +1,9 @@
-// //const { prisma } = require('./generated/prisma-client')
+// const { prisma } = require('./generated/prisma-client')
 
-// // A `main` function so that we can use async/await
+// A `main` function so that we can use async/await
 // async function main() {
 
-//   // Create a new Pokemon called `Bulbasaur`
+//    Create a new Pokemon called `Bulbasaur`
 //     const newPokemon = await prisma.createPokemon({
 //         name: 'Bulbasaur',
 //         url: 'http://hp-api.herokuapp.com/api/characters '})

@@ -16,7 +16,7 @@ pokemon.forEach((singleMon) => {
 //console.log(pokemon);
 
 const mainContainer = document.querySelector('.pokemon-container');
-class pokepoke{}
+
 function createPokeCard(pokedata) {
     let card = document.createElement('div');
     card.classList = 'card';
